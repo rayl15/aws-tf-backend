@@ -27,3 +27,20 @@ module "aws_backend" {
   namespace           = "my-app"
   force_destroy_state = true
 }
+
+### Inputs
+
+| Name                  | Type     | Description                                         | Default |
+|-----------------------|----------|-----------------------------------------------------|---------|
+| `namespace`           | `string` | A base namespace for naming and tagging resources.  | n/a     |
+| `force_destroy_state`  | `bool`   | Whether to forcefully delete the S3 bucket on destroy. | `false` |
+
+### Outputs
+
+| Name              | Description                                   |
+|-------------------|-----------------------------------------------|
+| `s3_bucket_id`    | The ID of the created S3 bucket.              |
+| `dynamodb_table`  | The name of the created DynamoDB table.       |
+| `kms_key_arn`     | The ARN of the KMS key for encryption.        |
+| `resource_group`  | The name of the AWS Resource Group created.   |
+
