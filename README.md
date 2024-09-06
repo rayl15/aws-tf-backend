@@ -21,12 +21,15 @@ This module sets up the following AWS resources:
 
 ### Example
 
-```hcl
+```
+hcl
 module "aws_backend" {
   source              = "path_to_this_module"
   namespace           = "my-app"
   force_destroy_state = true
-}```
+}
+```
+
 
 ### Inputs
 
